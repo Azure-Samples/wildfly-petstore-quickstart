@@ -328,3 +328,38 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Java-specific items
+*.log
+*.jdbc
+*.iml
+WebContent
+*.vpp~*
+*.vpdm
+vpproject
+.vpprefdata
+*dummy*.*
+*-soapui-project.xml
+.lock
+teamworkUser.xml
+projectFilesBackup*
+*.zip
+*.gzprojectFilesBackup*
+.factorypath
+
+# Packaged files
+target
+*.class
+*.jar
+*.war
+*.ear
+*.rar
+*.ipr
+*.iws
+rebel.xml
+*DB
+*.dat
+.classpath
+.project
+.settings
+.DS_Store
