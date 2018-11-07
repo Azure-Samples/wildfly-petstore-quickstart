@@ -1,57 +1,5 @@
 # Project Name
 
-(short, 1-3 sentenced, description of the project)
+This repository accompanies the [quickstart for Wildfly on App Service](), please see that document for step-by-step instructions on deploying this Application to Wildfly for App Service on Linux.
 
-## Features
-
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+This repository was originally forked from Antonio Goncalves's [original demonstration application](https://github.com/agoncal/agoncal-application-petstore-ee7).
