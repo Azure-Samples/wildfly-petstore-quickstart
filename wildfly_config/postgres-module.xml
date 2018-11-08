@@ -1,5 +1,11 @@
 <?xml version="1.0" ?>
 <module xmlns="urn:jboss:module:1.1" name="org.postgres">
+    <!--
+        The line above defines the name of the module. When the JBoss CLI discovers this file, it will
+        create an directory /org/postgres/ under the Wildfly directory.
+
+        The lines below define the resources and dependencies necesarry for Wildfly to use this module. 
+    -->
     <resources>
        <resource-root path="postgresql-42.2.5.jar" />
     </resources>
