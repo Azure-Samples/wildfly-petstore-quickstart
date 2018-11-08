@@ -15,9 +15,9 @@
     <version.log4j>2.8.2</version.log4j>
     
     <!-- Azure Quickstart -->
-    <!-- These values will be injected into the plugin. Replace them as you work through the tutorial. -->
-    <azure.plugin.appname>blessedwildfly</azure.plugin.appname>
-    <azure.plugin.resourcegroup>blessedwildfly</azure.plugin.resourcegroup>
+    <!-- These values will be injected into the Azure plugin. Replace the values as you work through the tutorial. -->
+    <azure.plugin.appname>APP_NAME</azure.plugin.appname>
+    <azure.plugin.resourcegroup>RESOURCE_GROUP</azure.plugin.resourcegroup>
     <azure.plugin.postgres-server-name>SERVER_NAME</azure.plugin.postgres-server-name>
     <azure.plugin.postgres-username>USERNAME@FIRST_PART_OF_SERVER_NAME</azure.plugin.postgres-username>
     <azure.plugin.postgres-password>PASSWORD</azure.plugin.postgres-password>
@@ -214,9 +214,12 @@
           <resourceGroup>${azure.plugin.resourcegroup}</resourceGroup>
           <appName>${azure.plugin.appname}</appName>
           
-          <!-- Remove this when devdiv finishes the plugin -->
+          <!-- TODO: Remove this when devdiv finishes the plugin -->
+           <containerSettings>
+              <imageName>shrishrirang/wildfly</imageName>
+            </containerSettings>
 
-          <!-- Uncomment when devdiv finishes the plugin
+          <!-- TODO: Uncomment when devdiv finishes the plugin
           <linuxRuntime>wildfly 14-jre8</linuxRuntime>
           -->
 

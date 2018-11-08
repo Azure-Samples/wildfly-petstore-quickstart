@@ -3,7 +3,6 @@
 
   <persistence-unit name="applicationPetstorePU" transaction-type="JTA">
     <!-- To use Postgres, change the jta-data-source to `java:jboss/datasources/postgresDS`. -->
-    <!-- old: `java:jboss/datasources/ExampleDS` -->
     <jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
