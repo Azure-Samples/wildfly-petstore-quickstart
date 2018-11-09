@@ -350,7 +350,6 @@ projectFilesBackup*
 # Packaged files
 target
 *.class
-*.jar
 *.war
 *.ear
 *.rar
