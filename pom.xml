@@ -16,8 +16,8 @@
     
     <!-- Azure Quickstart -->
     <!-- These values will be injected into the Azure plugin. Replace the values as you work through the tutorial. -->
-    <azure.plugin.appname>APP_NAME</azure.plugin.appname>
-    <azure.plugin.resourcegroup>RESOURCE_GROUP</azure.plugin.resourcegroup>
+    <azure.plugin.appname>wildflyusergroupdemo</azure.plugin.appname>
+    <azure.plugin.resourcegroup>wildflyusergroupdemo</azure.plugin.resourcegroup>
     <azure.plugin.postgres-server-name>SERVER_NAME</azure.plugin.postgres-server-name>
     <azure.plugin.postgres-username>USERNAME@FIRST_PART_OF_SERVER_NAME</azure.plugin.postgres-username>
     <azure.plugin.postgres-password>PASSWORD</azure.plugin.postgres-password>
@@ -43,7 +43,7 @@
     <!-- Other -->
     <version.swagger>1.5.17</version.swagger>
     <!--Maven Plugins & co-->
-    <version.maven.azure.plugin>1.4.1</version.maven.azure.plugin>
+    <version.maven.azure.plugin>1.5.1</version.maven.azure.plugin>
     <version.maven.war.plugin>3.1.0</version.maven.war.plugin>
     <version.maven.compiler.plugin>3.1</version.maven.compiler.plugin>
     <version.maven.dependency.plugin>2.10</version.maven.dependency.plugin>
@@ -213,15 +213,7 @@
         <configuration>
           <resourceGroup>${azure.plugin.resourcegroup}</resourceGroup>
           <appName>${azure.plugin.appname}</appName>
-          
-          <!-- TODO: Remove this when devdiv finishes the plugin -->
-           <containerSettings>
-              <imageName>shrishrirang/wildfly</imageName>
-            </containerSettings>
-
-          <!-- TODO: Uncomment when devdiv finishes the plugin
           <linuxRuntime>wildfly 14-jre8</linuxRuntime>
-          -->
 
           <appSettings>  <!-- These are passed as environment variables to the App Service instance-->
             <property>
