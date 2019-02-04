@@ -13,14 +13,6 @@
     <version.javaee>7.0</version.javaee>
     <version.jboss-javaee>1.1.0.Final</version.jboss-javaee>
     <version.log4j>2.8.2</version.log4j>
-    
-    <!-- Azure Quickstart -->
-    <!-- These values will be injected into the Azure plugin. Replace the values as you work through the tutorial. -->
-    <azure.plugin.appname>wildflyusergroupdemo</azure.plugin.appname>
-    <azure.plugin.resourcegroup>wildflyusergroupdemo</azure.plugin.resourcegroup>
-    <azure.plugin.postgres-server-name>SERVER_NAME</azure.plugin.postgres-server-name>
-    <azure.plugin.postgres-username>USERNAME@FIRST_PART_OF_SERVER_NAME</azure.plugin.postgres-username>
-    <azure.plugin.postgres-password>PASSWORD</azure.plugin.postgres-password>
 
     <!-- Test -->
     <version.junit>4.12</version.junit>
@@ -211,22 +203,26 @@
         <artifactId>azure-webapp-maven-plugin</artifactId>
         <version>${version.maven.azure.plugin}</version>
         <configuration>
-          <resourceGroup>${azure.plugin.resourcegroup}</resourceGroup>
-          <appName>${azure.plugin.appname}</appName>
+          <appName>YOUR_APP_NAME</appName>
+          <resourceGroup>YOUR_RESOURCE_GROUP</resourceGroup>
           <linuxRuntime>wildfly 14-jre8</linuxRuntime>
 
-          <appSettings>  <!-- These are passed as environment variables to the App Service instance-->
+          <!--
+            These are passed as environment variables to the App Service instance.
+            Edit the connection strings after you deploy the application with the in-memory DB.
+          -->
+          <appSettings>
             <property>
               <name>POSTGRES_CONNECTIONURL</name>
-              <value>jdbc:postgresql://${azure.plugin.postgres-server-name}:5432/postgres?ssl=true</value>
+              <value>jdbc:postgresql://YOUR_SERVER_NAME:5432/postgres?ssl=true</value>
             </property>
             <property>
               <name>POSTGRES_USERNAME</name>
-              <value>${azure.plugin.postgres-username}</value>
+              <value>YOUR_PG_USERNAME</value>
             </property>
             <property>
               <name>POSTGRES_PASSWORD</name>
-              <value>${azure.plugin.postgres-password}</value>
+              <value>YOUR_PG_PASSWORD</value>
             </property>
           </appSettings>
         </configuration>
