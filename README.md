@@ -1,12 +1,15 @@
 ---
 page_type: sample
 languages:
-- html
 - java
+- html
+- tsql
+- glsl
+- other
 products:
 - azure
 description: "This repository contains a demo Java EE application that accompanies the quickstart for Wildfly on App Service"
-urlFragment: quickstart-for-wildfly
+urlFragment: wildfly-petstore-quickstart
 ---
 
 # Quickstart for Wildfly on App Service for Linux
