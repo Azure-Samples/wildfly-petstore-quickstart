@@ -35,7 +35,7 @@
     <!-- Other -->
     <version.swagger>1.5.17</version.swagger>
     <!--Maven Plugins & co-->
-    <version.maven.azure.plugin>1.5.1</version.maven.azure.plugin>
+    <version.maven.azure.plugin>1.8.0</version.maven.azure.plugin>
     <version.maven.war.plugin>3.1.0</version.maven.war.plugin>
     <version.maven.compiler.plugin>3.1</version.maven.compiler.plugin>
     <version.maven.dependency.plugin>2.10</version.maven.dependency.plugin>
@@ -203,10 +203,26 @@
         <artifactId>azure-webapp-maven-plugin</artifactId>
         <version>${version.maven.azure.plugin}</version>
         <configuration>
-          <appName>YOUR_APP_NAME</appName>
+          <schemaVersion>v2</schemaVersion>
           <resourceGroup>YOUR_RESOURCE_GROUP</resourceGroup>
+          <appName>YOUR_APP_NAME</appName>
+          <region>REGION</region>
           <linuxRuntime>wildfly 14-jre8</linuxRuntime>
-
+          <runtime>
+            <os>linux</os>
+            <javaVersion>jre8</javaVersion>
+            <webContainer>WILDFLY 14</webContainer>
+          </runtime>
+          <deployment>
+            <resources>
+              <resource>
+                <directory>${project.basedir}/target</directory>
+                <includes>
+                  <include>*.war</include>
+                </includes>
+              </resource>
+            </resources>
+          </deployment>
           <!--
             These are passed as environment variables to the App Service instance.
             Edit the connection strings after you deploy the application with the in-memory DB.
