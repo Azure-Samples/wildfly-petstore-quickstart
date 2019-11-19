@@ -206,8 +206,7 @@
           <schemaVersion>v2</schemaVersion>
           <resourceGroup>YOUR_RESOURCE_GROUP</resourceGroup>
           <appName>YOUR_APP_NAME</appName>
-          <region>REGION</region>
-          <linuxRuntime>wildfly 14-jre8</linuxRuntime>
+          <region>REGION</region>          
           <runtime>
             <os>linux</os>
             <javaVersion>jre8</javaVersion>
